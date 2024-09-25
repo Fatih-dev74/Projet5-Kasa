@@ -1,0 +1,61 @@
+@import "variables";
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    background-color: $light-color;
+    margin-bottom: 50px;
+    padding: 56px 50px 43px 50px;
+    border-radius: 25px;
+
+    @media (max-width: 768px) {
+        background-color: $white-color;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 27px;
+        padding: 0;
+        gap: 20px;
+    }
+
+    &__item {
+        position: relative;
+        height: 340px;
+        width: 340px;
+
+        @media (max-width: 1440px) {
+            flex-grow: 1;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 255px;
+        }
+    }
+
+    &__img {
+        object-fit: cover;
+        width: 100%;
+        height: 340px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        @media (max-width: 768px) {
+            height: 255px;
+        }
+    }
+
+    &__caption {
+        font-size: 18px;
+        font-weight: 700;
+        color: $white-color;
+        position: absolute;
+        top: 87%;
+        padding: 0 20px 0 20px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: 768px) {
+            top: 80%;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import "~normalize.css/normalize.css";
+@import "variables";
+@import "navbar";
+@import "footer";
+@import "banner";
+@import "gallery";
+@import "about";
+@import "appartment";
+@import "notfound";
+@import "collapse";
+@import "slideshow";
+
+* {
+    margin: 0;
+}
+body {
+    font-family: $font-text;
+    max-width: 1440px;
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.main {
+    padding-inline: 100px;
+
+    @media (max-width: 768px) {
+        padding-inline: 20px;
+    }
+}

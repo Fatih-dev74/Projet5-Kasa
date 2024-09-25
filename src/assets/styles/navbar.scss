@@ -1,0 +1,57 @@
+@import "variables";
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 100px 50px 100px;
+
+    @media (max-width: 768px) {
+        padding: 20px 20px 27px 20px;
+    }
+
+    &__logo {
+        margin: 0;
+        padding: 0;
+        height: 68px;
+    
+        @media (max-width: 768px) {
+            height: 47px;
+        }
+    }
+
+    &__logo img {
+        height: 68px;
+
+        @media (max-width: 768px) {
+            height: 47px;
+        }
+    }
+
+    &__nav {
+        list-style: none;
+        padding: 0;
+
+        &--link {
+            display: inline;
+        }
+
+        &--link a {
+            color: $black-color;
+            text-decoration: none;
+            padding-left: 57px;
+            font-size: 24px;
+            font-weight: 500;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+                text-transform: uppercase;
+                padding-left: 26px;
+            }
+        }
+
+        .nav-active {
+            text-decoration: underline;
+        }
+    }
+}
